@@ -22,7 +22,6 @@ package com.solacesystems.jcsmp;
 import java.util.List;
 
 import com.solace.services.core.model.SolaceServiceCredentials;
-import com.solace.spring.cloud.core.SolaceMessagingInfo;
 
 /**
  * A Factory for {@link SpringJCSMPFactory} to Support Cloud Environments having
@@ -94,17 +93,4 @@ public interface SpringJCSMPFactoryCloudFactory {
 	 * otherwise an application.properties based {@link JCSMPProperties}
 	 */
 	JCSMPProperties getJCSMPProperties(SolaceServiceCredentials solaceServiceCredentials);
-
-    /**
-     * Lists All Cloud Environment detected Solace PubSub+ services.
-     *
-     * @deprecated As of 1.1.0, usage of {@link SolaceMessagingInfo}
-     * was replaced by its interface, {@link SolaceServiceCredentials}.
-     * Use {@link #getSolaceServiceCredentials()} instead.
-     *
-     * @return If in a Cloud Foundry environment, list of all Cloud Environment detected Solace PubSub+ services,
-	 * otherwise null
-     */
-	@Deprecated
-	List<SolaceMessagingInfo> getSolaceMessagingInfos();
 }

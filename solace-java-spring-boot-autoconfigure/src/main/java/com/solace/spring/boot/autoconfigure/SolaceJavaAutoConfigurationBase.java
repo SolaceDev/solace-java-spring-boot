@@ -2,7 +2,6 @@ package com.solace.spring.boot.autoconfigure;
 
 import com.solace.services.core.model.SolaceServiceCredentials;
 import com.solace.services.core.model.SolaceServiceCredentialsImpl;
-import com.solace.spring.cloud.core.SolaceMessagingInfo;
 import com.solacesystems.jcsmp.JCSMPChannelProperties;
 import com.solacesystems.jcsmp.JCSMPProperties;
 import com.solacesystems.jcsmp.SpringJCSMPFactory;
@@ -98,11 +97,6 @@ abstract class SolaceJavaAutoConfigurationBase implements SpringJCSMPFactoryClou
         cp.setConnectRetriesPerHost(properties.getConnectRetriesPerHost());
         cp.setReconnectRetryWaitInMillis(properties.getReconnectRetryWaitInMillis());
         return jcsmpProps;
-    }
-
-    @Override @Deprecated
-    public List<SolaceMessagingInfo> getSolaceMessagingInfos() {
-        return null;
     }
 
     private JCSMPProperties createFromApiProperties(Properties apiProps) {
