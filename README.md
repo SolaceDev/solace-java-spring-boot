@@ -143,11 +143,11 @@ Where reasonable, sensible defaults are always chosen. So a developer using a So
 
 See [`SolaceJavaProperties`](https://github.com/SolaceProducts/solace-java-spring-boot/blob/master/solace-java-spring-boot-autoconfigure/src/main/java/com/solace/spring/boot/autoconfigure/SolaceJavaProperties.java) for the most up to date list.
 
-Any additional Solace Java API properties can be set through configuring `solace.java.apiProperties.<Property>` where `<Property>` is the name of the property as defined in the [Solace Java API documentation for `com.solacesystems.jcsmp.JCSMPProperties`](https://docs.solace.com/API-Developer-Online-Ref-Documentation/java/constant-values.html#com.solacesystems.jcsmp.JCSMPProperties.ACK_EVENT_MODE), for example:
+Any additional Solace Java API properties can be set through configuring `solace.java.apiProperties.<Property>` where `<Property>` is the name of the property as defined in the "Value" column in the [Solace Java API documentation for `com.solacesystems.jcsmp.JCSMPProperties`](https://docs.solace.com/API-Developer-Online-Ref-Documentation/java/constant-values.html#com.solacesystems.jcsmp.JCSMPProperties.ACK_EVENT_MODE), for example:
 
 ```
 solace.java.apiProperties.reapply_subscriptions=false
-solace.java.apiProperties.ssl_trust_store=/path/to/truststore
+solace.java.apiProperties.SSL_TRUST_STORE=/path/to/truststore
 ```
 
 Note that the direct configuration of `solace.java.` properties takes precedence over the `solace.java.apiProperties.`.
